@@ -1,0 +1,8 @@
+In typescript data types can be given in two ways
+1. Type Annotation: we have explicitily mention the data type by variable:datatypename
+2. Type inferance: ts automatically guess and assigns the data type
+
+Data types defines the type od data a variable holds. There are two types of data types.
+1. primitive ----> number, boolean, string, null, undefined
+
+2. non-primitive

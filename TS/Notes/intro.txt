@@ -1,0 +1,25 @@
+Why We need TS?
+JavaScript is dynamically typed language and the datatype of variable changes with value of the variable. It might create issues in production , so Microsoft developed Typescript in 2012. 
+
+what is TypeScript?
+Typescripts adds static data typing to JS. it ensures type safety and Quality error less code. Typescript works at developer environment. TSCompiler convert your code from TS to JS
+TS is a superset of JS
+Getting Started: 
+step 1: download and install Node JS. while installing select "npm package manager". after installing check versions by going to "cmd" and type commands
+     node -v and npm -v
+
+step 2: Goto cmd and type " npm install -g typescript " and check version by typing "tsc -v" in command prompt
+
+step 3: download and install visual studio code
+
+step 4: create a folder and create a file "somename.ts", write some simple js code, goto terminal and new terminal and goto specific folder and type "tsc somename.ts" or "npx tsc somename.ts"
+
+it will convert ts into js and create a new js file
+
+copy this path "C:\Users\pc\AppData\Roaming\npm" in to path of environment variables
+
+In case tsc not working in powershell use command prompt
+
+
+
+
