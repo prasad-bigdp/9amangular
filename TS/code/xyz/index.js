@@ -1,40 +1,63 @@
-"use strict";
-let a = "prasad"; // type inferance
-let b = "raj"; // type  annotation
-let c = 25;
-let d = undefined;
-let e = null;
-let f = false;
-//union
-let g = 25;
-let h = 5;
-/* non -primitive */
-/* Arrays */
-let arr = [2, 5];
-let arr1 = [true, false, true];
-let arr2 = [2, "raj"];
-let arr3 = [25, "raj", 28]; //tuple
-// create a tuple which accepts a persons name,age,phone number in the same order
-let details = ["raj", 25, 555555555];
-//enums - enums are used to store constant value
-var days;
-(function (days) {
-    days[days["sunday"] = 1] = "sunday";
-    days[days["monday"] = 2] = "monday";
-    days[days["tuesday"] = 3] = "tuesday";
-    days[days["wednesday"] = 4] = "wednesday";
-    days[days["thursday"] = 5] = "thursday";
-    days[days["friday"] = 6] = "friday";
-    days[days["saturday"] = 7] = "saturday";
-})(days || (days = {}));
-console.log(days.sunday);
-let myDetails = {
-    name: "raj", age: 25
+let a = 35;
+console.log(a, typeof a);
+// setup
+//datatypes
+// type annotation and inference
+let b = 15;
+let c = "raj";
+/* primitve and non-primitve */
+let d = "raj";
+let e = true;
+let f = undefined;
+let h = null;
+let g = [2, 3, 5];
+let i = [2, "raj", 3]; //tuple
+let k = "";
+let l = 25;
+var colors;
+(function (colors) {
+    colors[colors["red"] = 0] = "red";
+    colors[colors["violet"] = 1] = "violet";
+    colors[colors["blue"] = 2] = "blue";
+})(colors || (colors = {}));
+let obj = {
+    phno: 25252, password: "sghgsd"
 };
-class Employee {
+/* functions */
+function myFun(a, b = 25) {
+    throw new Error("probelm happened");
 }
-let x = 25;
-let obj1 = {
-    name: "raj", age: 35, email: "a@a.co"
+function sum(a, b) {
+    console.log(a + b);
+}
+let sum2 = (a, b) => { console.log(a + b); };
+let sum3 = (a, b, c) => {
+    console.log(a + b + c);
+    return a + b + c;
 };
-/* create a object which we can use for signup(username,email,password) and define its data type by Interface and typeAlias */
+let sum4 = (a, b, c) => a + b + c;
+/* typescript cannot understand DOM directly */
+/* type assertion */
+let x = document.getElementById('inp');
+x.value = "prasad";
+/* OOPS */
+class Employee {
+    constructor(name, age, salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+    walk() {
+        console.log(this.name + " is walking");
+    }
+}
+class Manager extends Employee {
+    constructor(id, n, a, s) {
+        super(n, a, s);
+        this.mid = id;
+    }
+}
+//modules
+/* there are so many module systems existed, popular ones are commonjs,requirejs,ES6 etc.., */
+export default Employee;
+export { a, b, c, d, e, obj };

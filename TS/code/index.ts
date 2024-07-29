@@ -1,66 +1,104 @@
-let a = "prasad"; // type inferance
-let b: string = "raj"; // type  annotation
-let c: number = 25;
-let d: undefined = undefined;
-let e: null = null;
-let f: boolean = false;
+let a = 35;
+console.log(a, typeof a)
+// setup
+//datatypes
+// type annotation and inference
 
-
-//union
-let g: string | number = 25;
-
-let h: any = 5;
-
-/* non -primitive */
-/* Arrays */
-let arr: number[] = [ 2, 5 ];
-let arr1: boolean[] = [ true, false, true ];
-let arr2: (string | number)[] = [ 2, "raj" ]
-let arr3: [number, string, number] = [25, "raj", 28]  //tuple
-// create a tuple which accepts a persons name,age,phone number in the same order
-let details: [ string, number, number ] = [ "raj", 25, 555555555 ];
-//enums - enums are used to store constant value
-enum days{
-    sunday=1,
-    monday,
-    tuesday,
-    wednesday,
-    thursday,
-    friday,
-    saturday
+let b: number = 15;
+let c = "raj"
+/* primitve and non-primitve */
+let d: string = "raj";
+let e: boolean = true;
+let f: undefined = undefined;
+let h: null = null;
+let g: number[] = [ 2, 3, 5 ];
+let i: [ number, string, number ] = [ 2, "raj", 3 ]; //tuple
+let k: number | string = "";
+let l: any = 25
+enum colors{
+    red,
+    violet,
+    blue
 }
-console.log(days.sunday)
-
-//objects
-// objects are defined by two data types interfaces and type aliases
-
-interface ABC{
-    name: string,
-    email?: string,
-    age: number;
+//type alias and interfaces
+interface login1{
+    phno:number,password:string
 }
-interface XYZ extends ABC{
-    phno:number
+interface newInterface extends login1{ age:number}
+type login2 = {
+    phno:number,password:string
 }
-let myDetails:ABC = {
-    name:"raj",age:25
+let obj: login1 = {
+    phno:25252,password:"sghgsd"
 }
-class Employee implements ABC{
-    name!:string; age!:number;
+/* functions */
+function myFun(a:number, b:number=25):never
+{
+     throw new Error("probelm happened")
+   
 }
 
 
+function sum(a:number, b:number):void {
+    console.log(a + b);
+}
+let sum2 = (a: number, b: number): void => { console.log(a + b); }
+type prasad = (a: string, b: string, c: string) => string
+let sum3: prasad = (a, b, c) => {
+    console.log(a + b + c);
+    return a + b + c
+};
+let sum4: prasad = (a, b, c) => a + b + c
 
-/* type alias */
-type nsb=number|string|boolean
-let x: nsb = 25;
-type prasad={
-name:string,age:number,email:string
+/* typescript cannot understand DOM directly */
+/* type assertion */
+let x= document.getElementById('inp') as HTMLInputElement
+x.value="prasad"
+
+/* OOPS */
+ class Employee{
+    readonly name: string; age: number; salary:number;
+    constructor(name:string, age:number, salary:number) {
+        this.name = name;
+        this.age = age;
+        this.salary= salary
+    }
+     walk() {
+         console.log(this.name + " is walking")
+     }
 }
-let obj1: prasad = {
-    name:"raj",age:35,email:"a@a.co"
+class Manager extends Employee{
+    mid: number;
+    constructor(id: number, n:string, a:number, s:number) {
+        super(n,a,s)
+        this.mid=id
+    }
 }
-/* create a object which we can use for signup(username,email,password) and define its data type by Interface and typeAlias */
+
+
+
+
+//modules
+/* there are so many module systems existed, popular ones are commonjs,requirejs,ES6 etc.., */
+
+
+export default Employee;
+export {a,b,c,d,e,obj}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
