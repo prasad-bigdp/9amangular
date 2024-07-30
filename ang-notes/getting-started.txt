@@ -1,0 +1,40 @@
+Goto cmd, check npm is install or not by typing command "npm  -v"
+
+install angular by typing command 
+" npm install -g @angular/cli "
+Angular uses its command to create,update,run,delete files. this technique is scaffolding. @angular/cli is used for that
+
+use "ng v" to check whether properly installed or not
+
+First APP:
+-------------
+
+Open VS code--> open folder --> terminal --> goto specific folder 
+--> ng new app-name --standalone=false
+select css and No for server side rendering
+
+understanding Folder Structure
+tsconfig files set rules/setting to tsc while converting ts to js
+tsconfing.json is for whole project
+tsconfig.app.json is for one application
+tsconfig.spec.json  is for testing
+readme.md -- used for instruction/manual of your project
+package.json- meta data about project/application. it contains list of scripts and dependencies
+package-lock.json- in detailed information about package.json
+angular.json -- explains how angular works in your project
+.gitignore - contains list of files/folders git should ignore
+.angular- cache of angular
+.vscode -- vscode settings
+.editorconfig - multi code editors
+public -- list of public files
+src -- it contains whole code
+
+
+
+
+
+
+
+
+
+

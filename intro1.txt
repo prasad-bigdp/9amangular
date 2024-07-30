@@ -16,7 +16,7 @@ Angular uses two way data binding
 latest version is 18, but still stable is 16.
 official website is Angular.dev
 
-
+Angular buils SPA and PWA applications
 Course:
 JS basics,TS,Angular,RxJS,Git & GitHub,Netlify
 Duration: 40 sessions , every day 1 task
