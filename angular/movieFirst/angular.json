@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "firstApp": {
+    "movieFirst": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/first-app",
+            "outputPath": "dist/movie-first",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "firstApp:build:production"
+              "buildTarget": "movieFirst:build:production"
             },
             "development": {
-              "buildTarget": "firstApp:build:development"
+              "buildTarget": "movieFirst:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -104,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": "3037c4d7-8f00-43da-a5d8-a564a55df8a8"
+    "analytics": "4355a40f-97c4-4a9b-a3e6-3c29c56f8c8f"
   }
 }
