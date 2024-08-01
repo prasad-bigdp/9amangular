@@ -1,0 +1,4 @@
+Data Binding Means How the data transfers  from component to template or template to component
+In angular, we can do 
+  i. one way Data Binding
+  ii. Two Way Data Binding
