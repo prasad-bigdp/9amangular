@@ -1,0 +1,21 @@
+<!-- <div>
+  <input type="text" [(ngModel)]="username"><br><br>
+  <button (click)="change()">click me</button>
+  <h2>Hi, My name is {{un}}</h2>
+</div> -->
+<h1>ID GENERATOR</h1>
+<div class="inputs"> 
+  <input type="text" placeholder="Enter name" [(ngModel)]="name">
+  <input type="number" placeholder="Enter roll no" [(ngModel)]="rollno">
+  <input type="url" placeholder="Enter url of image" [(ngModel)]="url">
+  <button (click)="change()">Generate</button>
+</div>
+<div class="idcard">
+  <div class="detail">
+    <h2>Name: {{name1}}</h2>
+    <h3>Rollno: {{rollno1}}</h3>
+  </div>
+  <div class="image">
+    <img [src]="url1" alt="my id">
+  </div>
+</div>
