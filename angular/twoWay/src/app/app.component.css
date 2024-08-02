@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+}
+.idcard{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px black;
+    background-color: white;
+}
+.idcard img{
+    height: 200px;
+    width: 200px;
+}
