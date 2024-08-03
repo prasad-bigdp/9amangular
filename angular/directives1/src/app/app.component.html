@@ -1,0 +1,31 @@
+<h1>Directives Demo</h1>
+<button (click)="change()">click me</button>
+<!-- <div *ngIf="isLogin then chitti else bujji">
+  hellooooooooooooooooooooo
+</div>
+<ng-template #chitti>
+  <h2>Hello,Prasad</h2>
+  <button>Logout</button>
+</ng-template>
+<ng-template #bujji>
+  <div>
+    Please Login HERE
+    <input type="email" placeholder="Enter your email" /><br /><br />
+    <input type="password" placeholder="Enter your password" /><br /><br />
+    <button (click)="change()">submit</button>
+  </div>
+</ng-template> -->
+<div *ngIf="isAdmin then admin else xyz">
+</div>
+<ng-template  #xyz>
+  <div *ngIf="isEmployee then employee else user"></div>
+</ng-template>
+<ng-template #admin>Hello Admin</ng-template>
+<ng-template #employee>Hello Employee</ng-template>
+<ng-template #user>Hello User</ng-template>
+<div [ngSwitch]="role">
+  <p *ngSwitchCase="'admin'">Hello Admin</p>
+  <p *ngSwitchCase="'user'">Hello User</p>
+  <p *ngSwitchCase="'employee'">Hello Employee</p>
+  <p *ngSwitchDefault>Please enter valid value</p>
+</div>
