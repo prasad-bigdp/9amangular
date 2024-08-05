@@ -1,0 +1,8 @@
+<h1>Cartoons</h1>
+<div class="cartoons">
+  <div class="cartoon" *ngFor="let c of cartoons">
+    <img src="{{c.image}}" alt="{{c.title}}">
+    <h3>{{c.title}}</h3>
+    <p>Year: {{c.year}}</p>
+  </div>
+</div>

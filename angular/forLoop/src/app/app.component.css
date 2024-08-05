@@ -1,0 +1,16 @@
+#output{
+    display: flex;
+    gap: 30px;
+}
+#input input,#input button{
+    height: 50px;
+    border-radius: 30px;
+    font-size: 24px;
+}
+.red{
+    color: red;
+    display: none;
+}
+.blue{
+    color: blue;
+}

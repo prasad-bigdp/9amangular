@@ -8,12 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   myName: string = ''
   inp:string=''
-  myFun()
+  myFun(e:any)
   {
+    console.log(e)
    this.myName= this.inp
   }
   change(e: any)
   {
+    console.log(e)
     this.inp=e.target.value
   }
 
