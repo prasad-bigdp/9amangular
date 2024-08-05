@@ -1,0 +1,22 @@
+<!-- <h1>For Loop</h1>
+<div *ngFor="let i of details;let ind =index;let en=even;let od=odd;let f=first;let l=last;trackBy:track">
+<img src="{{i.url}}" alt="{{i.name}}" height="200">
+<h2>{{i.name}}</h2>
+<p>{{ind}}</p>
+<p>{{en}}</p>
+<p>{{od}}</p>
+<p>{{f}}</p>
+<p>{{l}}</p> -->
+
+<!-- </div> -->
+
+<div id="input">
+  <input type="text" placeholder="Enter task" [(ngModel)]="task">
+  <button (click)="submit()">Submit</button>
+</div>
+
+<div *ngFor="let item of tasks;let ind=index" id="output">
+ <h1 [ngClass]="{red:isRed,blue:!isRed}" [ngStyle]="{backgroundColor:isRed?'red':'green'}">{{item}}</h1>
+ <button (click)="make()">make it red</button>
+ <button (click)="remove(ind)">❌</button>
+</div>

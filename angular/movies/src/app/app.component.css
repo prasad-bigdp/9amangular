@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+}
+.cartoons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    padding: 50px;
+}
+.cartoon img{
+ height: 200px;
+ 
+}
+.cartoon{
+    box-shadow: 5px 5px black;
+ padding: 20px;
+ border-radius: 30px;
+}
