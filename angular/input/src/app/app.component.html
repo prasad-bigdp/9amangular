@@ -1,0 +1,13 @@
+<h1>Main component</h1>
+<input type="text" placeholder="Enter your name" [(ngModel)]="un">
+<p>{{x}}</p>
+<button (click)="myView()">click me</button>
+<app-movie #bujji></app-movie>
+{{bujji.count}}
+<app-movie (myClick)="parentFun($event)">click Parent</app-movie>
+<app-movie name="Radhe Shyam" [username]="un">
+  HEllooooooooooooooooooo
+</app-movie>
+<app-movie name="Kalki" [username]="un"></app-movie>
+<app-movie name="Salaar" [username]="un"></app-movie>
+<app-movie name="Eshwar" [username]="un"></app-movie>
