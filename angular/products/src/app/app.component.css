@@ -1,0 +1,19 @@
+#products{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 10px;
+}
+.product{
+    padding: 50px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 5px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.product img{
+   height: 200px;
+   
+}
