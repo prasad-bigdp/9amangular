@@ -1,0 +1,8 @@
+<div class="movies" style="display:grid;grid-template-columns: repeat(3,auto); padding: 50px; gap: 20px;">
+    <div class="movie" *ngFor="let m of movies;let ind=index" style="background-color: white;box-shadow: 5px 5px black; border-radius: 20px;padding: 30px;">
+        <img src="{{m.Poster}}" alt="{{m.Title}}">
+        <h2> <a routerLink="{{m.imdbID}}">
+            {{m.Title}}
+        </a></h2>
+    </div>
+</div>

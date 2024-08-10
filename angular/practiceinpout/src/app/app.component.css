@@ -1,0 +1,15 @@
+#parent{
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.buttons{
+    display: flex;
+   gap: 20px;
+
+}

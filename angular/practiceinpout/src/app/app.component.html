@@ -1,0 +1,9 @@
+<div id="parent">
+   <h2>{{child.c2}}</h2>
+   <div class="buttons">
+     <button (click)="pincr()">+</button>
+     <button (click)="pdecr()">-</button>
+     <button (click)="preset()">Reset</button>
+   </div>
+   <app-child-counter [c]="Pcount" #child></app-child-counter>
+</div>

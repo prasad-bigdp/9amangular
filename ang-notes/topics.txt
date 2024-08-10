@@ -3,3 +3,7 @@ Angular
   -- introduction, folder structure
   -- components, nested components
   -- data binding(one way - string interpolation(c-->t), property binding(c-->t),event binding(t-->c), two way)
+  -- directives
+  -- component communication
+  -- routing
+  -- services
