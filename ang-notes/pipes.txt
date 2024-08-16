@@ -1,0 +1,1 @@
+Pipes are used to transform the data
