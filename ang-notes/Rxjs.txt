@@ -1,0 +1,5 @@
+RXJs stands for Reactive Extension for JAVASCIPT. it is a js library
+It deals mainly three concepts
+i. observables
+ii. subjects
+iii. operators
