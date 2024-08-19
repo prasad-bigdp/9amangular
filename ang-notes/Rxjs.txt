@@ -1,5 +1,60 @@
-RXJs stands for Reactive Extension for JAVASCIPT. it is a js library
+RXJs stands for Reactive Extension for JAVASCIPT. it is a js library. it is used to deal asynchronous functions/operations
 It deals mainly three concepts
-i. observables
-ii. subjects
-iii. operators
+i. observables: observable is the core building block od RxJS. it is nothing but a stream of events that can be observed over time. they emit some values after user subscribes them
+myObservable = new Observable(sub => {
+    sub.next("hello");
+    sub.next("world");
+    setTimeout(() => {
+      
+      sub.next("by bye");
+      sub.complete()
+  },2000)
+   
+    
+   })
+  getData()
+  {
+    this.myObservable.subscribe({
+      next(res) { console.log(res) },
+      error(err) {
+          console.log(err)
+      },
+      complete() {
+          console.log("complted")
+      },
+    })
+
+    Observable get triggered by observer and leads to any of three actions i.e.., next(), error(),complete(). once it is completed observable will not send any value to observer
+
+ii. subjects: subjects are similar to observables but thwy act as both observable and observer
+there are four types of subjects
+ i. behavioural subjects
+ ii. replay subjects
+ iii. async subjects
+ iv. void subjects
+
+ subjects are used to multicast values
+ const subject = new Subject<number>();
+
+    subject.subscribe({
+      next: (v) => console.log(`observerA: ${v}`),
+    });
+    subject.subscribe({
+      next: (v) => console.log(`observerB: ${v}`),
+    });
+    subject.next(25)
+    subject.next(1);
+    subject.next(2);
+
+    // Logs:
+    // observerA: 1
+    // observerB: 1
+    // observerA: 2
+    // observerB: 2
+  }
+iii. operators: operators are used to filter/ to represent the data using default functions. 
+popular operators are
+  i. map
+  ii.of
+  iii. filter,
+  iv. switchMap

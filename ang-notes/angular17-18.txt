@@ -1,0 +1,2 @@
+Till Angular 16, Angular follows Module System
+But from Angular 17 onwards, Modules were not there. Each component becomes standalone
