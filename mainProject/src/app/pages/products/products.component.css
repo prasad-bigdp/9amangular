@@ -1,0 +1,12 @@
+
+#products{
+    margin: auto;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.product{
+    padding: 20px;
+    box-shadow: 5px 5px black;
+    border-radius: 20px;
+}

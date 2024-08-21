@@ -1,1 +1,18 @@
-<p>product works!</p>
+<div class="container py-5">
+    <div class=" row py-5">
+    <div class="col">
+        <img src="{{product.thumbnail}}" alt="{{product.title}}">
+        <div class="row">
+            <div class="col" *ngFor="let i of product.images">
+              <img src="{{i}}" alt="{{product.title}}" height="100">  
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h2>{{product.title}}</h2>
+        <p>{{product.description}}</p>
+        <p>Price: {{product.price | currency:"INR"}}</p>
+        <button mat-raised-button>Add to cart</button>
+    </div>
+</div>
+</div>

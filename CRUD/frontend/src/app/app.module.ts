@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './api.service';
-import { FormsModule} from '@angular/forms'
+import { FormsModule} from '@angular/forms';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'
 @NgModule({
   declarations: [
     AppComponent
@@ -17,7 +18,7 @@ import { FormsModule} from '@angular/forms'
     FormsModule
     
   ],
-  providers: [ApiService],
+  providers: [ApiService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
