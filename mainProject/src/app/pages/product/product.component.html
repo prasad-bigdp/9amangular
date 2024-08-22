@@ -12,7 +12,7 @@
         <h2>{{product.title}}</h2>
         <p>{{product.description}}</p>
         <p>Price: {{product.price | currency:"INR"}}</p>
-        <button mat-raised-button>Add to cart</button>
+        <button mat-raised-button (click)="addCart(product)">Add to cart</button>
     </div>
 </div>
 </div>

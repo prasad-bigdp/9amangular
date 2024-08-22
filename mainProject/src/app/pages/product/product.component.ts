@@ -15,5 +15,7 @@ export class ProductComponent {
     this.api.getSingleProduct(this.id).subscribe(
       (data) => this.product = data)
   }
-
+  addCart(product:any) {
+    this.api.add(product)
+  }
 }

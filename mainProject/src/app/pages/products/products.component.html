@@ -7,6 +7,6 @@
         <img src="{{p.thumbnail}}" alt="{{p.title}}">
         <a (click)="navigateTOProduct(p.id)"><h2>{{p.title}}</h2></a>
         <p><strong>Price:</strong> {{p.price|currency:"INR"}}</p>
-        <button mat-raised-button>Add to cart</button>
+        <button mat-raised-button (click)="addCart(p)">Add to cart</button>
     </div>
 </div>

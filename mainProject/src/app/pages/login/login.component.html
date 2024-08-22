@@ -1,1 +1,7 @@
-<p>login works!</p>
+<h1 class=" text-center">Login Page</h1>
+<form class=" container ">
+    <input class=" form-control m-4" type="text" name="username" ngModel #bujji="ngModel" required style="max-width: 400px;">
+    <p *ngIf="bujji?.touched && bujji?.hasError('required')">Please enter username</p>
+    <button (click)="checkData(bujji)">click me</button>
+    <!-- ng model creates an instance of formControl-->
+</form>

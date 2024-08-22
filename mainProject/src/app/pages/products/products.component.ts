@@ -48,4 +48,8 @@ export class ProductsComponent {
   navigateTOProduct(id:any) {
     this.route.navigateByUrl(`/product/${id}`)
   }
+  addCart(item:any)
+  {
+    this.api.add(item)
+  }
 }
