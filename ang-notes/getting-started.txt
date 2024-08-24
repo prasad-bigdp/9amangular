@@ -13,6 +13,9 @@ Open VS code--> open folder --> terminal --> goto specific folder
 --> ng new app-name --standalone=false
 select css and No for server side rendering
 
+--> To Run the first angular file use following command on vs code command prompt
+  "ng serve -o" -> Hit Enter then
+   
 understanding Folder Structure
 tsconfig files set rules/setting to tsc while converting ts to js
 tsconfing.json is for whole project
