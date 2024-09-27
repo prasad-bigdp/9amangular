@@ -1,0 +1,23 @@
+
+<h1>Movie List</h1>
+<div id="form">
+  <input type="text" placeholder="Enter title of movie" [(ngModel)]="name">
+  <input type="text" placeholder="Enter url of the movie" [(ngModel)]="url">
+  
+  <button (click)="add()">Create</button>
+</div>
+<div id="movies">
+  <div class="movie" *ngFor="let m of movies">
+    <img src="{{m.URL}}" alt="{{m.name}}">
+    <h2>{{m.name}}</h2>
+      <button (click)="update(m.id)">Update</button>
+
+    <button (click)="remove(m.id)">delete🗑️</button>
+  </div>
+</div>
+<div *ngIf="isUpdate" class="update">
+   <input type="text" placeholder="Enter title of movie" [(ngModel)]="name">
+  <input type="text" placeholder="Enter url of the movie" [(ngModel)]="url">
+  
+  <button (click)="update2()">Update</button>
+</div>

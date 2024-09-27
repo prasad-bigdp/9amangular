@@ -1,0 +1,14 @@
+
+@defer () {
+<app-child></app-child>
+}
+
+@loading(minimum 2s) {
+<p>loading...........</p>
+}
+@if(val%2==0){
+  <h1>Even</h1>
+}
+@else {
+    <h1>ODD</h1>
+}

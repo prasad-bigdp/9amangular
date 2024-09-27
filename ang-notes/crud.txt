@@ -1,0 +1,57 @@
+CRUD application will have create,read,update,delete operations.for this, i'm creating dummy backend
+
+Backend:  goto terminal and specific folder, follow these commands
+  -- npm install -g json-server
+  create empty file db.json in that folder
+  again in terminal type
+  -- json-server db.json --watch
+
+  it makes server runs , then goto db.json, create an array of objects like below
+  "movies":[
+    {
+      "name": "Titanic",
+      "URL": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
+      "id": "125"
+    },
+    {
+      "name": "Shawshank Redemption",
+      "URL": "https://m.media-amazon.com/images/I/71eIv6PDIiL._AC_UF1000,1000_QL80_.jpg",
+      "id": "164"
+    },
+    {
+      "name": "RRR",
+      "URL": "https://m.media-amazon.com/images/M/MV5BODUwNDNjYzctODUxNy00ZTA2LWIyYTEtMDc5Y2E5ZjBmNTMzXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
+      "id": "124"
+    },
+    {
+      "id": 520,
+      "name": "minions",
+      "URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDRc28G88RIEg7R5W1JrLnQJVLE6dW_hkugQ&s"
+    }
+  ]
+  keep it run in terminal , take new cmd and goto specific folder and create angular application
+frontend: ng new frontend --standalone=false
+create a service " ng g s service-name"
+goto app module, import and add httpClientModule in imports and service in provides
+
+Read the Data:
+Goto service , inject httpClient and write a function that returns observable by going this.hc.get('url')
+
+goto component, inject service and in constructor call service read method and subscribe and store the data in an array
+
+goto template, using ngFor print the array data
+
+delete Data:
+goto service, create a function that returns observice by going this .hc.delete('url/id')
+
+goto component, create a function that takes id and sends to service delete function and subscribe observable and reload the page
+
+goto template use event data binding call component dlete function and pass id
+
+create data: 
+goto service create a function that takes data and sends to url using this.hc.post('url',data). it returns observable
+
+goto component create a function that takes data using ng model and create an object and sends to service and subscribe it and reloads the page
+
+goto template keep a form and takes the data ,stores it using ngModel and on click trigger component create function
+

@@ -1,0 +1,17 @@
+<h1 class=" text-center">Cart</h1>
+<div class="container">
+    <div class="items">
+        <div class="item d-flex justify-content-between" *ngFor="let i of items">
+            <img src="{{i.thumbnail}}" alt="{{i.title}}" height="100" width="100">
+            <h2>{{i.title}}</h2>
+            <p>{{i.price|currency:"INR"}}</p>
+            <button>❎</button>
+        </div>
+    </div>
+    <div id="details" class=" d-flex justify-content-between m-5">
+        <div class="total">
+            Total:{{total|currency:"INR"}}
+        </div>
+        <button mat-raised-button>Checkout</button>
+<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_ORf3L4tQGrlhx7" async> </script> </form>  </div>
+</div>

@@ -1,0 +1,11 @@
+<div id="input" class=" d-flex justify-content-center gap-2 h-auto">
+  <input type="text" name="" id="" placeholder="enter movie name"  class=" form-control fs-5 h-100" 
+  [(ngModel)]="movieName">
+  <button class=" btn btn-primary h-auto" (click)="search()">search</button>
+</div>
+<div class="movies mt-4">
+  <div *ngFor="let m of movies" class=" p-3 rounded rounded-3">
+  <img src="{{m.Poster}}" alt="{{m.Title}}" height="200">
+  <h2>{{m.Title}}</h2>
+ </div>
+</div>

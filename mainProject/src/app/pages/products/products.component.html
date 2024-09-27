@@ -1,0 +1,12 @@
+<h1 class=" text-white fs-6 text-center">PRODUCTS</h1>
+<select name="categ" id="category" (input)="getCategoryProducts($event)">
+        <option value="{{c}}" *ngFor="let c of categories">{{c}}</option>
+</select>
+<div id="products">
+    <div class="product" *ngFor="let p of products">
+        <img src="{{p.thumbnail}}" alt="{{p.title}}">
+        <a (click)="navigateTOProduct(p.id)"><h2>{{p.title}}</h2></a>
+        <p><strong>Price:</strong> {{p.price|currency:"INR"}}</p>
+        <button mat-raised-button (click)="addCart(p)">Add to cart</button>
+    </div>
+</div>

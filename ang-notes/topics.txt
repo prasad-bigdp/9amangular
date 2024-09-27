@@ -3,7 +3,9 @@ Angular
   -- introduction, folder structure
   -- components, nested components
   -- data binding(one way - string interpolation(c-->t), property binding(c-->t),event binding(t-->c), two way)
-  -- directives
-  -- component communication
-  -- routing
-  -- services
+  -- directives (property directives(ngClass,ngStyle), structural directives(ngIf,ngSwitch,ngFor), custom directives)
+  -- component communication(@input,@output,template Reference variables, @viewChild)
+  -- routing( normal routing, child routing, dynamic routing, 404 routing)
+  -- services(normal services, httpClient - get, post,put,delete, dependency injection)
+  -- pipes
+  -- RxJS
